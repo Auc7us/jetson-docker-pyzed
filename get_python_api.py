@@ -211,6 +211,7 @@ if check_valid_file(whl_file):
         print("ERROR : An error occurred, 'pip' failed to setup python dependencies packages (pyzed was NOT correctly setup)")
         sys.exit(1)
 
+    print("Moving on to installing" whl_file)
     err_pyzed = pip_install(whl_file, ignore_install=True)
     if err_pyzed == 0:
         print("Done")
